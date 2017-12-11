@@ -77,4 +77,5 @@ SCRIPT
   
   config.vm.provision "shell", inline: $script
   config.vm.synced_folder ".", "/home/vagrant/src/libvmod-hashids", create: true
+  config.vm.network "forwarded_port", guest: 80, host: 8080
 end
