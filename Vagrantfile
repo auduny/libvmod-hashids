@@ -71,7 +71,8 @@ Vagrant.configure("2") do |config|
 
   $script = <<SCRIPT
     cp /tmp/vagrant-files/yum-varnish52.repo /etc/yum.repos.d/
-    yum install varnish
+    yum install -y pygpgme yum-utils epel-release
+    yum install -y varnish hitch
 SCRIPT
   
   config.vm.provision "shell", inline: $script
