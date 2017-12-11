@@ -1,16 +1,16 @@
 ============
-vmod-example
+vmod-hashids
 ============
 
 SYNOPSIS
 ========
 
-import example;
+import hashids;
 
 DESCRIPTION
 ===========
 
-Example Varnish vmod demonstrating how to write an out-of-tree Varnish vmod.
+Hashids Varnish vmod demonstrating how to write an out-of-tree Varnish vmod.
 
 Implements the traditional Hello World as a vmod.
 
@@ -28,10 +28,10 @@ Return value
 	STRING
 Description
 	Returns "Hello, " prepended to S
-Example
+Hashids
         ::
 
-                set resp.http.hello = example.hello("World");
+                set resp.http.hello = hashids.hello("World");
 
 INSTALLATION
 ============
@@ -87,11 +87,11 @@ USAGE
 
 In your VCL you could then use this vmod along the following lines::
 
-        import example;
+        import hashids;
 
         sub vcl_deliver {
                 # This sets resp.http.hello to "Hello, World"
-                set resp.http.hello = example.hello("World");
+                set resp.http.hello = hashids.hello("World");
         }
 
 COMMON PROBLEMS
@@ -111,10 +111,10 @@ COMMON PROBLEMS
 START YOUR OWN VMOD
 ===================
 
-The basic steps to start a new vmod from this example are::
+The basic steps to start a new vmod from this hashids are::
 
   name=myvmod
-  git clone libvmod-example libvmod-$name
+  git clone libvmod-hashids libvmod-$name
   cd libvmod-$name
   ./rename-vmod-script $name
 
