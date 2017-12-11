@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "file", source: "vagrant-files", destination: "/tmp/"
 
   $script = <<SCRIPT
-    cp /tmp/vagrant-files/yum-varnish52.repo /etc/yum.repos.d/
+    cp /tmp/vagrant-files/yum-varnish41.repo /etc/yum.repos.d/
     yum install -y pygpgme yum-utils epel-release
     yum install -y varnish varnish-devel hitch automake libtool python-docutils git
 SCRIPT
