@@ -76,5 +76,5 @@ Vagrant.configure("2") do |config|
 SCRIPT
   
   config.vm.provision "shell", inline: $script
-  config.vm.synced_folder ".", "/home/vagrant/src/libvmod-hashids"
+  config.vm.synced_folder ".", "/home/vagrant/src/libvmod-hashids", create: true
 end
